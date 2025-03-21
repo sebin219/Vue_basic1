@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vue 기초학습</title>
+  </head>
+  <body>
+    <div id="app">{{ message }}</div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="text/javascript">
+      const { createApp } = Vue;
+
+      let vm = createApp({
+        name: 'App',
+        data() {
+          return {
+            message: 'Hello Vue!',
+          };
+        },
+      });
+      vm.mount('#app'); //mount: id가 app인 데에다가 생성된 것을 올리겠다는 의미
+    </script>
+  </body>
+</html>
